@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Homepage</title>
+  <style>
+    input {
+  padding: 8px;
+  font-size: 16px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 80%;
+}
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #005fa3;
+}
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      text-align: center;
+      padding: 50px;
+    }
+    img {
+      border-radius: 50%;
+      width: 120px;
+      margin-top: 20px;
+    }
+     .project {
+      background: white;
+      margin: 30px auto;
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 350px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+     }
+     .project:hover {
+      transform: translateY(-5px);
+     }
+
+    }
+    a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Hello, I'm Indrit Cokaj</h1>
+  <p>I`m glad i m learning this today.</p>
+
+  <img src="https://i.pinimg.com/736x/f9/f7/4b/f9f74b42d75320587d68bbf5617fa39c.jpg" alt="Your Photo">
+
+  <h3>Contact Me:</h3>
+  <a href="mailto:you@example.com">Email Me</a>
+
+  <div class="project">
+    <h2>Personal Website</h2>
+    <p>This is a simple site I made using just HTML and CSS.</p>
+    <a href="#">#</a>
+  </div>
+<script>
+  function calculateTip() {
+    const bill = parseFloat(document.getElementById('bill').value);
+    const tip = bill * 0.15;
+
+    if (!isNaN(tip)) {
+      document.getElementById('tip-result').textContent = `15% tip: €${tip.toFixed(2)}`;
+    } else {
+      document.getElementById('tip-result').textContent = 'Please enter a valid number.';
+    }
+  }
+</script>
+
+</body>
+</html>
+<div class="project">
+  <h2>My Second Project</h2>
+  <p>An AI-powered text tool using no-code platforms (coming soon!).</p>
+  <a href="#">Preview</a>
+</div>
+<div class="project">
+  <h2>Tip Calculator</h2>
+  <p>Enter your bill below:</p>
+  
+  <input type="number" id="bill" placeholder="Enter bill amount" />
+  <button onclick="calculateTip()">Calculate Tip</button>
+
+  <p id="tip-result" style="margin-top: 10px;"></p>
+</div>
+
